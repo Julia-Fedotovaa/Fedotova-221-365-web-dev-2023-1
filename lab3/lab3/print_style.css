@@ -1,0 +1,33 @@
+header, footer, nav {
+  display: none;
+ }
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1, h2, h3 {
+  color: #333; 
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+ font-size: 20px;
+  font-weight: bold}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+

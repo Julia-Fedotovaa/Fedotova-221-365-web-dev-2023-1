@@ -1,0 +1,54 @@
+body {
+  background-color: #f0f0f0;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  
+}
+
+.hh {
+  
+
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    width: 60%; /* Примерная ширина по вашему желанию */
+    margin: 0 auto;
+    /* Дополнительные стили по желанию */
+
+}
+
+
+.container {
+  padding: 20px;
+  
+}
+.project-block {
+  background-color: #c0c8ff;
+  color: #5c5c5c;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px 0px #000000;
+  padding: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.project-block-center {
+
+  background-color: #303F9F;
+  color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px 0px #000000;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+
+} 

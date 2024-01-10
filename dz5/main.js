@@ -97,23 +97,12 @@ showToDoneModal.addEventListener('show.bs.modal',toDone)
 
 function toDone(event){
     let task = event.relatedTarget.closest('#task-template');
-    let name = task.querySelector('.task-name').textContent;
-    let description = task.querySelector('.task-description').textContent;
+    let name = task.dataset.name;
+    let description = task.dataset.description;
     let id = task.dataset.id;
     let status = task.dataset.status;
-    event.target.querySelector('#editNameTask').value = name;
-    event.target.querySelector('#editTextTask').value = description;
-    const btn = event.target.querySelector('#save');
-    btn.addEventListener('click', function(event) { 
-        name = document.getElementById('editNameTask').value
-        description = document.getElementById('editTextTask').value
-        //const item = JSON.parse(localStorage.getItem(id));
-        //item.name = name;
-        //item.description = description;
-        //localStorage.setItem(id, JSON.stringify(item));
-        editTask(id, name, description, status);
-        //task.querySelector('.task-name').textContent = item.name;
-        //task.querySelector('.task-description').textContent = item.desc;
+    btn.addEventListener('click', function(event) {
+        editTask(id, name, description, 'done');
     });
 }
 

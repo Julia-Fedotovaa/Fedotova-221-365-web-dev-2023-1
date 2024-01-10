@@ -8,10 +8,10 @@ let btn = document.querySelector('#create');
 function createItem(value){
     const list = document.querySelector(`#${value.status}-list`);
     const item = document.getElementById('task-template').cloneNode(true);
-    //const moveDoneBtn = item.querySelector('.move-done');
-    //moveDoneBtn.addEventListener('click', function(event) {
-     //   moveTaskToDone(value.id);
-    ///});
+    const moveDoneBtn = document.getElementById('move-done');
+    moveDoneBtn.addEventListener('click', function(event) {
+       moveTaskToDone(value.id);
+    });
     item.querySelector('.task-name').textContent = value.name ? value.name : 'No name';
     item.dataset.id=value.id;
     item.dataset.status=value.status;
@@ -97,18 +97,18 @@ function clearTasksLists() {
 
 
 
-//function moveTaskToDone(id) {
-  //  const taskElement = document.querySelector([data-id="${id}"]);
-    //const todoList = document.getElementById('to-do-list');
-    //const doneList = document.getElementById('done-list');
+function moveTaskToDone(id) {
+    const taskElement = document.querySelector([data-id="${id}"]);
+    const todoList = document.getElementById('to-do-list');
+    const doneList = document.getElementById('done-list');
 
     // Перемещение задачи из "To Do" в "Done"
-  //  todoList.removeChild(taskElement);
-    //doneList.appendChild(taskElement);
+    todoList.removeChild(taskElement);
+    doneList.appendChild(taskElement);
 
     // Обновление статуса задачи в базе данных
-    //editTask(id, taskElement.querySelector('.task-name').textContent, taskElement.querySelector('.task-description').textContent, 'done');
-//}
+    editTask(id, taskElement.querySelector('.task-name').textContent, taskElement.querySelector('.task-description').textContent, 'done');
+}
 
 async function deleteTask(id) {
     console.log(`DELETING ${id}`)

@@ -114,18 +114,7 @@ function moveTaskToDone(id) {
   window.location.reload();
 }
 
-function moveTaskToTodo(id) {
-  console.log(`MOVING ${id}`)
-  const taskElement = document.querySelector(`[data-id="${id}"]`);
-  const todoList = document.getElementById('to-do-list');
-  const doneList = document.getElementById('done-list');
 
-  doneList.removeChild(taskElement);
-  todoList.appendChild(taskElement);
-
-  editTask(id, taskElement.querySelector('.task-name').textContent, taskElement.querySelector('.task-description').textContent, 'to-do');
-  window.location.reload();
-}
 
 async function deleteTask(id) {
   console.log(`DELETING ${id}`)

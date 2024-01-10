@@ -106,6 +106,7 @@ function moveTaskToDone(id) {
 
     // Обновление статуса задачи в базе данных
     editTask(id, taskElement.querySelector('.task-name').textContent, taskElement.querySelector('.task-description').textContent, 'done');
+}
 
 async function deleteTask(id) {
     console.log(`DELETING ${id}`)

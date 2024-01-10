@@ -92,8 +92,8 @@ function clearTasksLists() {
     ))
 }
 
-const showToDoneModal = document.querySelector('#toDone');
-showToDoneModal.addEventListener('show.bs.modal',toDone)
+const showEditModal = document.querySelector('#toDone');
+showEditModal.addEventListener('show.bs.modal',toDone)
 
 function toDone(event){
     let task = event.relatedTarget.closest('#task-template');
